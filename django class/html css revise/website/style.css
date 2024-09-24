@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* navbar */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(0, 0, 0, 1); */
+    position: sticky;
+    top: 0;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0;
+}
+
+.navbar ul li{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 25px;
+    transition: all .5s ease;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover{
+    background-color: white;
+    color: rgb(13, 98, 209);
+    box-shadow: 0 0 20px rgb(13, 98, 209);
+}
+
+
+/* Home section */
+#home{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-attachment: fixed;
+    height: 100%;
+    background: url(zoroo.jpg) no-repeat center center/cover;
+}
+p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    right: 3%;
+}
+
+.headings{
+    font-family: century;
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0px;
+}
+
+#headings{
+    font-size: 2rem;
+    font-family: century;
+    text-align: center;
+    margin: 30px 0px;
+}
+span{
+    color: rgb(13, 98, 209);
+}
+
+
+
+/* About section */
+#about{
+    display: flex;
+    gap: 5rem;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    /* margin: 0px 0px 50px 0px; */
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+#image{
+    display: flex;
+}
+#image img{
+    width: 500px;
+    height: 400px;
+    background-attachment: fixed;
+    padding: 20px;
+    border-radius: 40px;
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+}
+#intro h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+/* education section */
+#education{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+#education h1{
+    margin: 60px;   
+}
+.study{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-left: 50px;
+}
+
+
+/* services section */
+#services{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.box{
+    width: 350px;
+    height: 450px;
+    margin: 10px;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.box img{
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.slide{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), rgb(13, 98, 209));
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: justify;
+    transition: height 0.5s;
+}
+.box:hover img{
+    transform: scale(1.1);
+}
+.box:hover .slide{
+    height: 100%;
+}
+
+
+
+
+
+/* contact section */
+#contact{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 0px;
+}
+form input, form textarea{
+    padding: 15px;
+    margin: 15px 0;
+    width: 30%;
+    border: none;
+    outline: none;
+    background: #262626;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+#msg{
+    width: 30%;
+    padding: 15px;
+    margin: 15px;
+    border: none;
+    outline: none;
+}
+#send{
+    padding: 10px;
+    width: 10%;
+    margin: 20px 0;
+    border: none;
+    outline: none;
+}
+#send:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px rgb(13, 98, 209);
+}

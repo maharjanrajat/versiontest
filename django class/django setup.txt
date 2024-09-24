@@ -1,0 +1,71 @@
+py -m venv .venv
+source .venv/Scripts/activate
+source .venv/Scripts/deactivate
+pip install django
+django-admin startproject <project_name>
+
+
+
+
+create views.py, and templates folder
+
+views.py:
+#from django.http import HttpResponse
+from django.shortcuts import render
+def homepage(request):
+    return render(request, 'home.html')
+#   return HttpResponse("Hello World")
+
+def about(request):
+    return render(request, 'about.html')
+#   return Htpresponse("My about page!")
+
+
+Inside templates:
+
+home.html:
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Home</h1>
+    <p>Check out my <a href="/about">About</a> Page</p>
+</body>
+</html>
+
+
+about.html:
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body>
+    <h1>About</h1>
+    <p>Check out my <a href="/home">Home</a> Page</p>
+</body>
+</html>
+
+
+
+Start App:
+py manage.py startapp <app_name>
+
+
+Run server:
+cd <project_name>/
+py manage.py runserver
+
+
+For Migration:
+py manage.py makemigrations
+py manage.py migrate
